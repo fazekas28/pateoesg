@@ -2,5 +2,5 @@
 import axios from "axios";
 
 export const makeRequest = axios.create({
-    baseURL: 'http://localhost:3001/api/'
+    baseURL: 'https://gifted-bass-shoulder-pads.cyclic.cloud/api/'
 })
