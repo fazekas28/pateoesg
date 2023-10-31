@@ -50,11 +50,11 @@ export default function Home() {
   return (
     <main className="w-full flex min-h-screen flex-col items-center bg-zinc-100">
       <Header />
-      <div className='w-full flex flex-row'>
-        <div className='flex justify-start pt-10 w-1/3'>
+      <div className='w-full flex flex-col md:flex-row'>
+        <div className='flex justify-start pt-10 md:w-1/3 sm:w-full'>
           <Sidebar />
         </div>
-        <div className='flex flex-col gap-20 pt-10 justify-center'>
+        <div className='flex flex-col gap-20 pt-10 justify-center relative overflow-x-auto'>
           <TableMainOleo />
           <TableMainFilter />
         </div>
