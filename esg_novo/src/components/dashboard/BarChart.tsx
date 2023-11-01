@@ -59,7 +59,7 @@ export const BarChart = () => {
   makeRequest.post('barchart')
    .then((res) => {
     setData(res.data.data);
-    setLabels(res.data.labels.map((label: string | number) => filialMapping[label] || label));
+    setLabels(res.data.labels.map((label: any ) => filialMapping[label] || label));
    })
    .catch((err) => {
     console.log(err);
