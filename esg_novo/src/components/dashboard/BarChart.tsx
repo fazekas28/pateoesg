@@ -28,7 +28,7 @@ const filialMapping: Record<string, string> = {
 export const BarChart = () => {
 
  const [data, setData] = useState<number[]>([]);
- const [labels, setLabels] = useState<any[]>([]);
+ const [labels, setLabels] = useState([] as any);
  const [chartData, setChartData] = useState({
   labels: [],
   datasets: [{
@@ -59,7 +59,7 @@ export const BarChart = () => {
   makeRequest.post('barchart')
    .then((res) => {
     setData(res.data.data);
-    setLabels(res.data.labels.map((label: any ) => filialMapping[label] || label));
+    setLabels(res.data.labels.map((label: string | number ) => filialMapping[label] || label));
    })
    .catch((err) => {
     console.log(err);
